@@ -19,6 +19,7 @@ export class AuthService {
     // localStorage.setItem('authenticated', 'true');
     // this.router.navigate([routes.adminDashboard]);
     let URL = URL_SERVICIOS+'/auth/login';
+    console.log(email, password);
     return this.http.post(URL, {email: email, password: password});
   }
 }

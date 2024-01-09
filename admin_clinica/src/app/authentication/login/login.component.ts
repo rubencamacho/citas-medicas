@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
       .subscribe((resp:any) => {
         console.log(resp);
       },(error) =>{
-        console.log(this.form.value.email);
-        console.log(this.form.value.password);
 
         console.log(error);
       });
