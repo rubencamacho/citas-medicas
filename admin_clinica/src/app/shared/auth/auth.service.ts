@@ -23,7 +23,7 @@ export class AuthService {
 
   getLocalStorage(){
     if(localStorage.getItem('user') && localStorage.getItem('token')){
-      let USER = localStorage.getItem('user');
+      const USER = localStorage.getItem('user');
       this.user = JSON.parse(USER ? USER : '');
       this.token = localStorage.getItem('token');
     }else{
@@ -42,7 +42,6 @@ export class AuthService {
         return result;
       }),
       catchError((error:any) =>{
-        console.log(error);
         return of(undefined);
       })
     );

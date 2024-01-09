@@ -25,6 +25,8 @@ export class HeaderComponent {
         this.miniSidebar = false;
       }
     });
+    const USER = localStorage.getItem('user');
+    this.user = JSON.parse(USER ? USER : '');
     this.user = this.auth.user;
   }
 
