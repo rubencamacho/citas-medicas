@@ -194,11 +194,32 @@ export class DataService {
     );
   }
   public sideBar = [
-    {
+    {  
       tittle: 'Main',
       showAsTab: false,
       separateRoute: false,
       menu: [
+        {
+          menuValue: 'Roles y Permisos',
+          hasSubRoute: true,
+          showSubRoute: false,
+          base: 'gallery',
+          base2: 'profile',
+          icon: 'fa-columns',
+          faIcon: true,
+          subMenus: [
+            {
+              menuValue: 'Register',
+              route: routes.registerRole,
+              base: routes.registerRole,
+            },
+            {
+              menuValue: 'Listado',
+              route: routes.listadoRole,
+              base: routes.listadoRole,
+            },
+          ],
+        },
         {
           menuValue: 'Dashboard',
           hasSubRoute: true,
