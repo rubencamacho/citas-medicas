@@ -21,7 +21,7 @@
                         <div class="form-group row">
                             <label class="col-form-label col-md-2">Nombre</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control">
+                                <input type="text" [(ngModel)]="name" class="form-control">
                             </div>
                         </div>
                     </form>
@@ -48,7 +48,7 @@
                                                     <ng-container *ngFor="let submenu of side.subMenus">
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox" name="checkbox"> {{ submenu.menuValue }}
+                                                                <input type="checkbox" name="checkbox" (click)="addPermission(submenu)"> {{ submenu.menuValue }}
                                                             </label>
                                                         </div>
                                                     </ng-container>
@@ -58,7 +58,7 @@
                                                 <div class="" *ngIf="side.subMenus && side.subMenus.length === 0">
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input type="checkbox" name="checkbox"> {{ side.menuValue }}
+                                                            <input type="checkbox" name="checkbox" (click)="addPermission(side)"> {{ side.menuValue }}
                                                         </label>
                                                     </div>
                                                 </div>
